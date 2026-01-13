@@ -1,85 +1,1347 @@
-2026-01-12 14:22:24.678 |  WARN |                      main | i.m.core.instrument.MeterRegistry        | This Gauge has been already registered (MeterId{name='disk.free', tags=[tag(axonserver=My Axon Server),tag(path=/)]}), the registration will be ignored. Note that subsequent logs will be logged at debug level.
-2026-01-12 14:22:26.202 |  INFO |                      main | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server started on port: 8224 - no SSL
-2026-01-12 14:22:26.467 |  INFO |                      main | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway started on port: 8124 - no SSL
-2026-01-12 14:22:26.567 |  INFO |                      main | o.s.b.w.embedded.tomcat.TomcatWebServer  | Tomcat started on port 8024 (http) with context path '/'
-2026-01-12 14:22:26.637 |  INFO |                      main | io.axoniq.axonserver.AxonServer          | Started AxonServer in 34.817 seconds (process running for 36.491)
-2026-01-12 14:22:32.083 |  INFO |      http-nio-8024-exec-2 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 14:22:40.671 |  INFO |     http-nio-8024-exec-10 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to initialize cluster [default] .
-2026-01-12 14:22:40.710 |  INFO |     http-nio-8024-exec-10 | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: Initializing log
-2026-01-12 14:22:40.716 |  INFO |     http-nio-8024-exec-10 | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: File for segment 1 does not exist. Creating new file with size of 16777216.
-2026-01-12 14:22:40.807 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from null to IdleState (Node initialized.)
-2026-01-12 14:22:40.836 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Starting the node...
-2026-01-12 14:22:40.849 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from IdleState to FollowerState (Role PRIMARY)
-2026-01-12 14:22:40.869 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "_admin" is scheduled each 1 hour(s).
-2026-01-12 14:22:40.872 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Node started.
-2026-01-12 14:22:42.663 |  INFO |        _admin-raftState-1 | i.a.axonserver.cluster.FollowerState     | _admin in term 0: Timeout in follower state: 1807 ms.
-2026-01-12 14:22:42.676 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from FollowerState to PreVoteState (_admin in term 0: Timeout in follower state: 1807 ms.)
-2026-01-12 14:22:42.703 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultPreVote    | _admin: Starting pre-vote from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 0
-2026-01-12 14:22:42.708 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 0: Updating state from PreVoteState to CandidateState (_admin: Election for term 1 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
-2026-01-12 14:22:42.726 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 0: Leader is null
-2026-01-12 14:22:42.736 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Term updated (My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 is starting a new election, so increases its term from 0 to 1).
-2026-01-12 14:22:42.738 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultElection   | _admin: Starting election from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 1
-2026-01-12 14:22:42.751 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Updating state from CandidateState to LeaderState (_admin: Election for term 1 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
-2026-01-12 14:22:42.806 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 1: (notification) Leader is My Axon Server
-2026-01-12 14:22:42.817 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 1: Leader
-2026-01-12 14:22:42.827 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Start replication thread for 0 peers.
-2026-01-12 14:22:42.828 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Appending info that leader has been elected.
-2026-01-12 14:22:43.016 |  INFO |     http-nio-8024-exec-10 | i.a.a.c.r.file.PrimaryLogEntryStore      | default: Initializing log
-2026-01-12 14:22:43.019 |  INFO |     http-nio-8024-exec-10 | i.a.a.c.r.file.PrimaryLogEntryStore      | default: File for segment 1 does not exist. Creating new file with size of 16777216.
-2026-01-12 14:22:43.023 |  INFO |     http-nio-8024-exec-10 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from null to IdleState (Node initialized.)
-2026-01-12 14:22:43.041 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Starting the node...
-2026-01-12 14:22:43.042 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from IdleState to FollowerState (Role PRIMARY)
-2026-01-12 14:22:43.046 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "default" is scheduled each 1 hour(s).
-2026-01-12 14:22:43.047 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Node started.
-2026-01-12 14:22:44.847 |  INFO |       default-raftState-1 | i.a.axonserver.cluster.FollowerState     | default in term 0: Timeout in follower state: 1804 ms.
-2026-01-12 14:22:44.849 |  INFO |       default-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from FollowerState to PreVoteState (default in term 0: Timeout in follower state: 1804 ms.)
-2026-01-12 14:22:44.856 |  INFO |       default-raftState-1 | i.a.a.cluster.election.DefaultPreVote    | default: Starting pre-vote from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 0
-2026-01-12 14:22:44.857 |  INFO |       default-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | default in term 0: Updating state from PreVoteState to CandidateState (default: Election for term 1 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
-2026-01-12 14:22:44.877 |  INFO |       default-raftState-1 | i.a.a.logging.ClusterEventsLogger        | default in term 0: Leader is null
-2026-01-12 14:22:44.879 |  INFO |       default-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Term updated (My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 is starting a new election, so increases its term from 0 to 1).
-2026-01-12 14:22:44.880 |  INFO |       default-raftState-1 | i.a.a.cluster.election.DefaultElection   | default: Starting election from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 1
-2026-01-12 14:22:44.882 |  INFO |       default-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Updating state from CandidateState to LeaderState (default: Election for term 1 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
-2026-01-12 14:22:44.902 |  INFO |       default-raftState-1 | i.a.a.logging.ClusterEventsLogger        | default in term 1: (notification) Leader is My Axon Server
-2026-01-12 14:22:44.914 |  INFO |       default-raftState-1 | i.a.a.logging.ClusterEventsLogger        | default in term 1: Leader
-2026-01-12 14:22:44.918 |  INFO |       default-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Start replication thread for 0 peers.
-2026-01-12 14:22:44.919 |  INFO |       default-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Appending info that leader has been elected.
-2026-01-12 14:22:45.171 |  INFO |         _admin-raftNode-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: apply configuration change 4: Create context _admin
-2026-01-12 14:22:45.174 |  INFO |         _admin-raftNode-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: update last applied configuration change index 4
-2026-01-12 14:22:45.241 |  INFO |         _admin-raftNode-1 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: apply configuration change 5: Create context default
-2026-01-12 14:22:45.243 |  INFO |         _admin-raftNode-1 | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: update last applied configuration change index 5
-2026-01-12 14:22:45.276 |  INFO |         _admin-raftNode-1 | i.a.a.logging.ClusterEventsLogger        | _admin: context _admin created, my role PRIMARY, min event token 0, min snapshot token 0
-2026-01-12 14:22:45.579 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Index on disk is up to date
-2026-01-12 14:22:45.608 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Opening file ./events/default/00000000000000000000.events
-2026-01-12 14:22:45.618 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Segments initialized
-2026-01-12 14:22:45.638 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Index on disk is up to date
-2026-01-12 14:22:45.639 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Opening file ./events/default/00000000000000000000.snapshots
-2026-01-12 14:22:45.643 |  INFO |        default-raftNode-1 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Segments initialized
-2026-01-12 14:22:45.676 |  INFO |        default-raftNode-1 | i.a.a.logging.ClusterEventsLogger        | default: context default created, my role PRIMARY, min event token 0, min snapshot token 0
-2026-01-12 14:23:10.820 |  INFO |      http-nio-8024-exec-8 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 14:39:26.315 |  INFO |      http-nio-8024-exec-5 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 14:40:24.522 |  INFO |     http-nio-8024-exec-10 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 14:49:30.517 |  INFO |      http-nio-8024-exec-3 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 15:19:10.603 |  INFO |      http-nio-8024-exec-9 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
-2026-01-12 15:25:35.371 |  INFO |      http-nio-8024-exec-7 | .r.ReplicationGroupAdminRequestProcessor | [<anonymous>] Requested to list all replication groups.
-2026-01-12 15:25:35.376 |  INFO |      http-nio-8024-exec-4 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
-2026-01-12 15:25:35.941 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 1ms preparation
-2026-01-12 15:25:44.065 |  INFO |      http-nio-8024-exec-5 | A.i.a.a.a.u.r.RaftUserAdminService       | [<anonymous>] Request to list users and their roles.
-2026-01-12 15:27:58.012 |  INFO |      http-nio-8024-exec-2 | A.i.a.a.rest.PluginsRestController       | [<anonymous>] Request to list current plugins. 
-2026-01-12 15:28:04.238 |  INFO |      http-nio-8024-exec-7 | A.i.a.a.a.u.r.RaftUserAdminService       | [<anonymous>] Request to list users and their roles.
-2026-01-12 15:30:51.508 |  INFO |      http-nio-8024-exec-6 | A.i.a.a.rest.ClusterRestController       | [<anonymous>] Request cluster template download.
-2026-01-12 16:11:01.434 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway stopped
-2026-01-12 16:11:01.457 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Stopping the node...
-2026-01-12 16:11:01.470 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: Stop replication thread
-2026-01-12 16:11:01.477 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: last applied: 7
-2026-01-12 16:11:01.485 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 1: My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 steps down from Leader role.
-2026-01-12 16:11:01.486 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Updating state from LeaderState to IdleState (Node stopped)
-2026-01-12 16:11:01.699 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | _admin: No longer leader
-2026-01-12 16:11:01.742 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 1: Node stopped.
-2026-01-12 16:11:01.743 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Stopping the node...
-2026-01-12 16:11:01.745 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: Stop replication thread
-2026-01-12 16:11:01.746 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: last applied: 3
-2026-01-12 16:11:01.747 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 1: My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 steps down from Leader role.
-2026-01-12 16:11:01.748 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Updating state from LeaderState to IdleState (Node stopped)
-2026-01-12 16:11:01.773 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | default: No longer leader
-2026-01-12 16:11:01.779 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 1: Node stopped.
-2026-01-12 16:11:01.797 |  INFO | ngApplicationShutdownHook | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server stopped
+2026-01-13 00:48:39.807 |  INFO |      http-nio-8024-exec-3 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
+2026-01-13 00:48:39.856 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14504@UExcel.52f7222d-fcaa-4e1a-8197-a8dc4e037e75, context = default: Platform connection completed by client
+2026-01-13 00:48:39.856 |  INFO |           MessageBroker-8 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14504@UExcel.52f7222d-fcaa-4e1a-8197-a8dc4e037e75, context = default: Platform stream inactivity for 14504@UExcel.52f7222d-fcaa-4e1a-8197-a8dc4e037e75
+2026-01-13 00:48:39.866 | ERROR |      http-nio-8024-exec-7 | o.a.c.c.C.[.[.[/].[dispatcherServlet]    | Servlet.service() for servlet [dispatcherServlet] threw exception
+reactor.core.Exceptions$OverflowException: Could not emit tick 104 due to lack of requests (interval doesn't support small downstream requests that replenish slower than the ticks)
+	at reactor.core.Exceptions.failWithOverflow(Exceptions.java:251) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxInterval$IntervalRunnable.run(FluxInterval.java:131) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.PeriodicWorkerTask.call(PeriodicWorkerTask.java:59) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.PeriodicWorkerTask.run(PeriodicWorkerTask.java:73) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:48:40.026 | ERROR |      http-nio-8024-exec-7 | o.a.c.c.C.[.[.[/].[dispatcherServlet]    | Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: reactor.core.Exceptions$OverflowException: Could not emit tick 104 due to lack of requests (interval doesn't support small downstream requests that replenish slower than the ticks)] with root cause
+reactor.core.Exceptions$OverflowException: Could not emit tick 104 due to lack of requests (interval doesn't support small downstream requests that replenish slower than the ticks)
+	at reactor.core.Exceptions.failWithOverflow(Exceptions.java:251) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxInterval$IntervalRunnable.run(FluxInterval.java:131) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.PeriodicWorkerTask.call(PeriodicWorkerTask.java:59) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.PeriodicWorkerTask.run(PeriodicWorkerTask.java:73) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:48:40.032 |  INFO |           MessageBroker-8 | i.a.a.logging.TopologyEventsLogger       | Application inactivity timeout for product-service clientId = 14504@UExcel, context = default
+2026-01-13 00:48:40.078 | ERROR |      http-nio-8024-exec-7 | o.a.c.c.C.[.[.[/].[dispatcherServlet]    | Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:365) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:263) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityReturnValueHandler.handleReturnValue(ResponseEntityReturnValueHandler.java:79) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:490) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:351) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:83) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:129) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:334) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:225) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:491) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:439) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:358) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:209) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:286) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:150) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:239) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:243) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:48:40.087 | ERROR |      http-nio-8024-exec-7 | o.a.c.c.C.[Tomcat].[localhost]           | Exception Processing [ErrorPage[errorCode=0, location=/error]]
+org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:365) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:263) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ResponseEntityReturnValueHandler.handleReturnValue(ResponseEntityReturnValueHandler.java:79) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:136) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	... 96 common frames omitted
+Wrapped by: jakarta.servlet.ServletException: Request processing failed: org.springframework.http.converter.HttpMessageNotWritableException: No converter for [class java.util.LinkedHashMap] with preset Content-Type 'text/event-stream'
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1022) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:490) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:351) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:83) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:129) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:228) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:241) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:334) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:225) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:138) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$4(HandlerMappingIntrospector.java:267) ~[spring-webmvc-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.11.jar!/:6.4.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101) ~[spring-web-6.2.11.jar!/:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:612) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.doInclude(ApplicationDispatcher.java:491) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.ApplicationDispatcher.include(ApplicationDispatcher.java:439) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:358) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:209) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:286) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:150) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.catalina.connector.CoyoteAdapter.asyncDispatch(CoyoteAdapter.java:239) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProcessor.dispatch(AbstractProcessor.java:243) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:57) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:975) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:493) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.46.jar!/:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:49:09.310 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 29436@UExcel, clientStreamId = 29436@UExcel.c4286f2c-cfa8-435a-a9de-b43eb96db0c7, context = default
+2026-01-13 00:50:36.096 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:52:23.585 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:52:25.159 |  INFO |     http-nio-8024-exec-11 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:52:26.344 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:52:47.059 |  INFO |      http-nio-8024-exec-2 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:53:16.307 |  INFO |      http-nio-8024-exec-3 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:53:27.545 |  INFO |     http-nio-8024-exec-11 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:54:37.576 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:54:37.589 |  WARN |            ad-hoc-query-1 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:54:37.594 |  WARN |            ad-hoc-query-1 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerate="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerate
+java.lang.RuntimeException: Invalid identifier: aggerate
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:20.429 |  INFO |     http-nio-8024-exec-11 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:55:20.440 |  WARN |            ad-hoc-query-2 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:20.444 |  WARN |            ad-hoc-query-2 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:21.695 |  INFO |      http-nio-8024-exec-4 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:55:21.705 |  WARN |            ad-hoc-query-1 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:21.709 |  WARN |            ad-hoc-query-1 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:40.009 |  INFO |      http-nio-8024-exec-2 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:55:40.021 |  WARN |            ad-hoc-query-2 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:55:40.024 |  WARN |            ad-hoc-query-2 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.timeconstraints.NoOpExpression.process(zga:67) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:43.379 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:56:43.387 |  WARN |            ad-hoc-query-3 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:43.389 |  WARN |            ad-hoc-query-3 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.timeconstraints.NoOpExpression.process(zga:67) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:50.198 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:56:50.207 |  WARN |            ad-hoc-query-1 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:50.209 |  WARN |            ad-hoc-query-1 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:53.741 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:56:55.374 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:56:55.383 |  WARN |            ad-hoc-query-2 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:56:55.388 |  WARN |            ad-hoc-query-2 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:20.271 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:57:20.281 |  WARN |            ad-hoc-query-1 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:20.283 |  WARN |            ad-hoc-query-1 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query AggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: AggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: AggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:21.873 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:57:21.881 |  WARN |            ad-hoc-query-3 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:21.883 |  WARN |            ad-hoc-query-3 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query AggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: AggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: AggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:22.094 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:57:22.103 |  WARN |            ad-hoc-query-2 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:57:22.108 |  WARN |            ad-hoc-query-2 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query AggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: AggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: AggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:17.729 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:58:17.805 |  WARN |           data-fetcher-19 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query AggerateIdentifier=72e96a7a-1d50-4781-86af-6d4d46759fda - mismatched input '<EOF>' expecting {'(', '[', '*', '/', '%', '+', '-', '<', '<=', '>', '>=', '=', '!=', '<>', K_MINUTE, K_HOUR, K_DAY, K_WEEK, K_MONTH, K_YEAR, K_AND, K_OR, K_NOT, IDENTIFIER, NUMERIC_LITERAL, STRING_LITERAL}
+java.text.ParseException: mismatched input '<EOF>' expecting {'(', '[', '*', '/', '%', '+', '-', '<', '<=', '>', '>=', '=', '!=', '<>', K_MINUTE, K_HOUR, K_DAY, K_WEEK, K_MONTH, K_YEAR, K_AND, K_OR, K_NOT, IDENTIFIER, NUMERIC_LITERAL, STRING_LITERAL}
+	at io.axoniq.axonserver.queryparser.EventStoreQueryParser$1.syntaxError(EventStoreQueryParser.java:43) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at org.antlr.v4.runtime.ProxyErrorListener.syntaxError(ProxyErrorListener.java:41) ~[antlr4-runtime-4.13.2.jar!/:4.13.2]
+	at org.antlr.v4.runtime.Parser.notifyErrorListeners(Parser.java:544) ~[antlr4-runtime-4.13.2.jar!/:4.13.2]
+	at org.antlr.v4.runtime.DefaultErrorStrategy.reportInputMismatch(DefaultErrorStrategy.java:327) ~[antlr4-runtime-4.13.2.jar!/:4.13.2]
+	at org.antlr.v4.runtime.DefaultErrorStrategy.reportError(DefaultErrorStrategy.java:139) ~[antlr4-runtime-4.13.2.jar!/:4.13.2]
+	at io.axoniq.EventStoreQueryParser.expr(EventStoreQueryParser.java:686) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at io.axoniq.EventStoreQueryParser.expr(EventStoreQueryParser.java:624) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at io.axoniq.EventStoreQueryParser.expr(EventStoreQueryParser.java:648) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at io.axoniq.EventStoreQueryParser.query(EventStoreQueryParser.java:188) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at io.axoniq.axonserver.queryparser.EventStoreQueryParser.parse(EventStoreQueryParser.java:52) ~[axonserver-query-parser-2025.2.3.jar!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.onNext(cca:119) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.onNext(cca:136) ~[!/:na]
+	at reactor.core.publisher.LambdaSubscriber.onNext(LambdaSubscriber.java:160) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.onNext(FluxSubscribeOn.java:151) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstMain.tryDirectSend(FluxSwitchOnFirst.java:804) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.sendFirst(FluxSwitchOnFirst.java:752) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.request(FluxSwitchOnFirst.java:695) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.requestUpstream(FluxSubscribeOn.java:131) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.onSubscribe(FluxSubscribeOn.java:124) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.subscribe(FluxSwitchOnFirst.java:737) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.run(FluxSubscribeOn.java:194) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:17.809 |  WARN |           data-fetcher-19 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.sendFirst(FluxSwitchOnFirst.java:760) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.request(FluxSwitchOnFirst.java:695) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.requestUpstream(FluxSubscribeOn.java:131) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.onSubscribe(FluxSubscribeOn.java:124) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.subscribe(FluxSwitchOnFirst.java:737) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSubscribeOn$SubscribeOnSubscriber.run(FluxSubscribeOn.java:194) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:29.120 |  INFO |     http-nio-8024-exec-10 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:58:29.130 |  WARN |            ad-hoc-query-2 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:29.133 |  WARN |            ad-hoc-query-2 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query AggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: AggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: AggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:39.405 |  INFO |      http-nio-8024-exec-4 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:58:39.415 |  WARN |            ad-hoc-query-1 | a.a.l.q.QueryEventsRequestStreamObserver | Query stream cancelled with error
+java.util.concurrent.CancellationException: FluxSwitchOnFirst has already been cancelled
+	at reactor.core.publisher.FluxSwitchOnFirst$AbstractSwitchOnFirstMain.cancelAndError(FluxSwitchOnFirst.java:673) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxSwitchOnFirst$SwitchOnFirstControlSubscriber.onError(FluxSwitchOnFirst.java:956) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onError(MonoFlatMapMany.java:256) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BaseSink.error(FluxCreate.java:479) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:868) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.error(FluxCreate.java:813) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:239) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.error(FluxCreate.java:191) ~[reactor-core-3.7.11.jar!/:3.7.11]
+	at io.axoniq.axonserver.localstorage.i.onError(uca:851) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:239) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:39.418 |  WARN |            ad-hoc-query-1 | i.a.axonserver.rest.HttpStreamingQuery   | Error while processing query aggerateIdentifier="72e96a7a-1d50-4781-86af-6d4d46759fda" - Invalid identifier: aggerateIdentifier
+java.lang.RuntimeException: Invalid identifier: aggerateIdentifier
+	at io.axoniq.axonserver.localstorage.query.result.EventExpressionResult.getByIdentifier(mba:179) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.Identifier.apply(gea:39) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.apply(aja:182) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.expressions.binary.AbstractBooleanExpression.process(aja:65) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.J.process(xea:190) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:375) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:151) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.F(via:472) ~[!/:na]
+	at java.base/java.util.stream.MatchOps$1MatchSink.accept(MatchOps.java:90) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.concurrent.ConcurrentSkipListMap$KeySpliterator.tryAdvance(ConcurrentSkipListMap.java:3176) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.tryAdvance(Streams.java:720) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:230) ~[na:na]
+	at java.base/java.util.stream.MatchOps$MatchOp.evaluateSequential(MatchOps.java:196) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.anyMatch(ReferencePipeline.java:632) ~[na:na]
+	at io.axoniq.axonserver.localstorage.file.FileEventStorageEngine.query(via:250) ~[!/:na]
+	at io.axoniq.axonserver.localstorage.query.QueryEventsRequestStreamObserver.F(cca:25) ~[!/:na]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-13 00:58:47.984 |  INFO |      http-nio-8024-exec-3 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:59:44.538 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:59:45.975 |  INFO |      http-nio-8024-exec-2 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:59:47.296 |  INFO |     http-nio-8024-exec-10 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 00:59:48.738 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:00:41.191 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:00:42.416 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:00:47.476 |  INFO |      http-nio-8024-exec-3 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:00:51.524 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:00:52.502 |  INFO |     http-nio-8024-exec-11 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:01.194 |  INFO |      http-nio-8024-exec-9 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:08.177 |  INFO |      http-nio-8024-exec-2 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:09.418 |  INFO |     http-nio-8024-exec-10 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:10.791 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:12.213 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:13.091 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:16.502 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:18.742 |  INFO |     http-nio-8024-exec-11 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:22.785 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:27.347 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:30.370 |  INFO |      http-nio-8024-exec-7 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:32.507 |  INFO |      http-nio-8024-exec-5 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:37.532 |  INFO |      http-nio-8024-exec-8 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:40.398 |  INFO |      http-nio-8024-exec-2 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:41.730 |  INFO |     http-nio-8024-exec-10 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:42.854 |  INFO |      http-nio-8024-exec-1 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:01:48.921 |  INFO |      http-nio-8024-exec-3 | i.a.axonserver.rest.SearchController     | ⏱️ AxonServer Query Timing - Processing AxonServer Query Language for context 'default' after 0ms preparation
+2026-01-13 01:20:29.896 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 29436@UExcel.c4286f2c-cfa8-435a-a9de-b43eb96db0c7, context = default: Platform connection completed by client
+2026-01-13 12:22:49.891 |  WARN |                      main | i.m.core.instrument.MeterRegistry        | This Gauge has been already registered (MeterId{name='disk.free', tags=[tag(axonserver=My Axon Server),tag(path=/)]}), the registration will be ignored. Note that subsequent logs will be logged at debug level.
+2026-01-13 12:22:52.156 |  INFO |                      main | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server started on port: 8224 - no SSL
+2026-01-13 12:22:52.259 |  INFO |                      main | i.a.a.c.r.file.PrimaryLogEntryStore      | default: Initializing log
+2026-01-13 12:22:52.439 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Updating state from null to IdleState (Node initialized.)
+2026-01-13 12:22:52.454 |  INFO |                      main | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: Initializing log
+2026-01-13 12:22:52.694 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Updating state from null to IdleState (Node initialized.)
+2026-01-13 12:22:52.707 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Starting the node...
+2026-01-13 12:22:52.722 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Updating state from IdleState to FollowerState (Role PRIMARY)
+2026-01-13 12:22:52.744 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "_admin" is scheduled each 1 hour(s).
+2026-01-13 12:22:52.748 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Node started.
+2026-01-13 12:22:52.983 |  INFO |                      main | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway started on port: 8124 - no SSL
+2026-01-13 12:22:53.045 |  INFO |                      main | o.s.b.w.embedded.tomcat.TomcatWebServer  | Tomcat started on port 8024 (http) with context path '/'
+2026-01-13 12:22:53.124 |  INFO |                      main | io.axoniq.axonserver.AxonServer          | Started AxonServer in 43.023 seconds (process running for 45.46)
+2026-01-13 12:22:53.147 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Index on disk is up to date
+2026-01-13 12:22:53.152 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Opening file ./events/default/00000000000000000000.events
+2026-01-13 12:22:53.199 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Segments initialized
+2026-01-13 12:22:53.233 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Index on disk is up to date
+2026-01-13 12:22:53.234 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Opening file ./events/default/00000000000000000000.snapshots
+2026-01-13 12:22:53.239 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Segments initialized
+2026-01-13 12:22:53.245 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Starting the node...
+2026-01-13 12:22:53.251 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Updating state from IdleState to FollowerState (Role PRIMARY)
+2026-01-13 12:22:53.256 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "default" is scheduled each 1 hour(s).
+2026-01-13 12:22:53.259 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Node started.
+2026-01-13 12:22:53.734 |  INFO |        _admin-raftState-0 | i.a.axonserver.cluster.FollowerState     | _admin in term 2: Timeout in follower state: 1006 ms.
+2026-01-13 12:22:53.748 |  INFO |        _admin-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Updating state from FollowerState to PreVoteState (_admin in term 2: Timeout in follower state: 1006 ms.)
+2026-01-13 12:22:53.775 |  INFO |        _admin-raftState-0 | i.a.a.cluster.election.DefaultPreVote    | _admin: Starting pre-vote from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 2
+2026-01-13 12:22:53.781 |  INFO |        _admin-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 2: Updating state from PreVoteState to CandidateState (_admin: Election for term 3 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
+2026-01-13 12:22:53.795 |  INFO |        _admin-raftState-0 | i.a.a.logging.ClusterEventsLogger        | _admin in term 2: Leader is null
+2026-01-13 12:22:53.804 |  INFO |        _admin-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Term updated (My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 is starting a new election, so increases its term from 2 to 3).
+2026-01-13 12:22:53.806 |  INFO |        _admin-raftState-0 | i.a.a.cluster.election.DefaultElection   | _admin: Starting election from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 3
+2026-01-13 12:22:53.817 |  INFO |        _admin-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from CandidateState to LeaderState (_admin: Election for term 3 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
+2026-01-13 12:22:53.865 |  INFO |        _admin-raftState-0 | i.a.a.logging.ClusterEventsLogger        | _admin in term 3: (notification) Leader is My Axon Server
+2026-01-13 12:22:53.893 |  INFO |        _admin-raftState-0 | i.a.a.logging.ClusterEventsLogger        | _admin in term 3: Leader
+2026-01-13 12:22:53.899 |  INFO |        _admin-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 3: Start replication thread for 0 peers.
+2026-01-13 12:22:53.900 |  INFO |        _admin-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 3: Appending info that leader has been elected.
+2026-01-13 12:22:55.560 |  INFO |       default-raftState-0 | i.a.axonserver.cluster.FollowerState     | default in term 2: Timeout in follower state: 2306 ms.
+2026-01-13 12:22:55.561 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Updating state from FollowerState to PreVoteState (default in term 2: Timeout in follower state: 2306 ms.)
+2026-01-13 12:22:55.569 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultPreVote    | default: Starting pre-vote from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 2
+2026-01-13 12:22:55.571 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 2: Updating state from PreVoteState to CandidateState (default: Election for term 3 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
+2026-01-13 12:22:55.592 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 2: Leader is null
+2026-01-13 12:22:55.594 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Term updated (My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 is starting a new election, so increases its term from 2 to 3).
+2026-01-13 12:22:55.595 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultElection   | default: Starting election from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 3
+2026-01-13 12:22:55.597 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from CandidateState to LeaderState (default: Election for term 3 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
+2026-01-13 12:22:55.658 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 3: (notification) Leader is My Axon Server
+2026-01-13 12:22:55.679 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 3: Leader
+2026-01-13 12:22:55.681 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 3: Start replication thread for 0 peers.
+2026-01-13 12:22:55.682 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 3: Appending info that leader has been elected.
+2026-01-13 12:23:06.395 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11248@UExcel, clientStreamId = 11248@UExcel.0c661b40-1262-4f6e-9094-a2fe12e38782, context = default
+2026-01-13 12:24:52.180 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11248@UExcel.0c661b40-1262-4f6e-9094-a2fe12e38782, context = default: Platform connection completed by client
+2026-01-13 12:25:15.418 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 7388@UExcel, clientStreamId = 7388@UExcel.3ab51db4-bdf2-44a9-a382-61419cbf9e92, context = default
+2026-01-13 12:26:12.986 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 7388@UExcel.3ab51db4-bdf2-44a9-a382-61419cbf9e92, context = default: Platform connection completed by client
+2026-01-13 12:26:36.164 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 13328@UExcel, clientStreamId = 13328@UExcel.8d0ae494-0d79-4376-b296-0744ee3cc6c4, context = default
+2026-01-13 12:26:42.091 |  INFO |          MessageBroker-11 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 13328@UExcel.8d0ae494-0d79-4376-b296-0744ee3cc6c4, context = default: Platform stream inactivity for 13328@UExcel.8d0ae494-0d79-4376-b296-0744ee3cc6c4
+2026-01-13 12:26:42.104 |  INFO |          MessageBroker-11 | i.a.a.logging.TopologyEventsLogger       | Application inactivity timeout for product-service clientId = 13328@UExcel, context = default
+2026-01-13 12:28:07.689 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 13328@UExcel, clientStreamId = 13328@UExcel.ed6bdf70-f20f-4252-8bb4-d27298ed6806, context = default
+2026-01-13 12:28:14.080 |  INFO |           MessageBroker-5 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 13328@UExcel.ed6bdf70-f20f-4252-8bb4-d27298ed6806, context = default: Platform stream inactivity for 13328@UExcel.ed6bdf70-f20f-4252-8bb4-d27298ed6806
+2026-01-13 12:28:14.087 |  INFO |           MessageBroker-5 | i.a.a.logging.TopologyEventsLogger       | Application inactivity timeout for product-service clientId = 13328@UExcel, context = default
+2026-01-13 12:28:15.280 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 13328@UExcel, clientStreamId = 13328@UExcel.e3ced583-a187-45ba-8641-60ffbd201fff, context = default
+2026-01-13 12:32:51.204 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 13328@UExcel.e3ced583-a187-45ba-8641-60ffbd201fff, context = default: Platform connection completed by client
+2026-01-13 12:33:22.507 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14148@UExcel, clientStreamId = 14148@UExcel.766fe1bd-efef-43dd-b6ec-dab87b703bb9, context = default
+2026-01-13 12:33:23.943 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14148@UExcel.766fe1bd-efef-43dd-b6ec-dab87b703bb9, context = default: Platform connection completed by client
+2026-01-13 12:33:44.791 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 27392@UExcel, clientStreamId = 27392@UExcel.072479e9-801c-40aa-bd8b-fa89178582ae, context = default
+2026-01-13 12:33:56.326 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 27392@UExcel.072479e9-801c-40aa-bd8b-fa89178582ae, context = default: Platform connection completed by client
+2026-01-13 12:34:17.059 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 3504@UExcel, clientStreamId = 3504@UExcel.8e7e2b21-1238-4c33-a2f6-141888f00448, context = default
+2026-01-13 12:48:04.094 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 3504@UExcel.8e7e2b21-1238-4c33-a2f6-141888f00448, context = default: Platform connection completed by client
+2026-01-13 12:48:10.110 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 3504@UExcel, clientStreamId = 3504@UExcel.c4e176ea-10b6-4a7d-9630-b6cea96c433a, context = default
+2026-01-13 12:59:52.186 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 3504@UExcel.c4e176ea-10b6-4a7d-9630-b6cea96c433a, context = default: Platform connection completed by client
+2026-01-13 13:00:09.809 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 27372@UExcel, clientStreamId = 27372@UExcel.52cd54f3-6c28-4c4a-8d30-3ce9af549e4f, context = default
+2026-01-13 13:05:18.072 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 27372@UExcel.52cd54f3-6c28-4c4a-8d30-3ce9af549e4f, context = default: Platform connection completed by client
+2026-01-13 13:05:40.142 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 21244@UExcel, clientStreamId = 21244@UExcel.d10febfe-6b21-4327-a7ac-b590764adc45, context = default
+2026-01-13 13:08:40.234 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 21244@UExcel.d10febfe-6b21-4327-a7ac-b590764adc45, context = default: Platform connection completed by client
+2026-01-13 13:22:59.488 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 19372@UExcel, clientStreamId = 19372@UExcel.b99f6834-4f31-451b-b6c4-52bf090631be, context = default
+2026-01-13 13:33:54.427 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 19372@UExcel.b99f6834-4f31-451b-b6c4-52bf090631be, context = default: Platform connection completed by client
+2026-01-13 14:05:46.409 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 20784@UExcel, clientStreamId = 20784@UExcel.26c960ce-2275-4d36-942d-02d93497562e, context = default
+2026-01-13 14:08:10.745 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 20784@UExcel.26c960ce-2275-4d36-942d-02d93497562e, context = default: Platform connection completed by client
+2026-01-13 14:08:28.271 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 22852@UExcel, clientStreamId = 22852@UExcel.8dcba972-5fa6-4ff8-9bbd-7b6daeabeca4, context = default
+2026-01-13 14:13:38.931 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 22852@UExcel.8dcba972-5fa6-4ff8-9bbd-7b6daeabeca4, context = default: Platform connection completed by client
+2026-01-13 14:19:02.352 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway stopped
+2026-01-13 14:19:02.362 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Stopping the node...
+2026-01-13 14:19:02.372 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 3: Stop replication thread
+2026-01-13 14:19:02.376 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 3: last applied: 8
+2026-01-13 14:19:02.383 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 3: My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 steps down from Leader role.
+2026-01-13 14:19:02.385 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from LeaderState to IdleState (Node stopped)
+2026-01-13 14:19:02.649 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | default: No longer leader
+2026-01-13 14:19:02.688 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Node stopped.
+2026-01-13 14:19:02.690 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Stopping the node...
+2026-01-13 14:19:02.691 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 3: Stop replication thread
+2026-01-13 14:19:02.692 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 3: last applied: 9
+2026-01-13 14:19:02.692 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 3: My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 steps down from Leader role.
+2026-01-13 14:19:02.693 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from LeaderState to IdleState (Node stopped)
+2026-01-13 14:19:02.698 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | _admin: No longer leader
+2026-01-13 14:19:02.703 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Node stopped.
+2026-01-13 14:19:02.720 |  INFO | ngApplicationShutdownHook | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server stopped
+2026-01-13 19:29:09.855 |  WARN |                      main | i.m.core.instrument.MeterRegistry        | This Gauge has been already registered (MeterId{name='disk.free', tags=[tag(axonserver=My Axon Server),tag(path=/)]}), the registration will be ignored. Note that subsequent logs will be logged at debug level.
+2026-01-13 19:29:11.774 |  INFO |                      main | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server started on port: 8224 - no SSL
+2026-01-13 19:29:11.863 |  INFO |                      main | i.a.a.c.r.file.PrimaryLogEntryStore      | _admin: Initializing log
+2026-01-13 19:29:11.994 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from null to IdleState (Node initialized.)
+2026-01-13 19:29:12.009 |  INFO |                      main | i.a.a.c.r.file.PrimaryLogEntryStore      | default: Initializing log
+2026-01-13 19:29:12.016 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from null to IdleState (Node initialized.)
+2026-01-13 19:29:12.020 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Starting the node...
+2026-01-13 19:29:12.032 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from IdleState to FollowerState (Role PRIMARY)
+2026-01-13 19:29:12.050 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "_admin" is scheduled each 1 hour(s).
+2026-01-13 19:29:12.053 |  INFO |                      main | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Node started.
+2026-01-13 19:29:12.216 |  INFO |                      main | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway started on port: 8124 - no SSL
+2026-01-13 19:29:12.272 |  INFO |                      main | o.s.b.w.embedded.tomcat.TomcatWebServer  | Tomcat started on port 8024 (http) with context path '/'
+2026-01-13 19:29:12.362 |  INFO |                      main | io.axoniq.axonserver.AxonServer          | Started AxonServer in 44.122 seconds (process running for 46.491)
+2026-01-13 19:29:12.453 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Index on disk is up to date
+2026-01-13 19:29:12.456 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Opening file ./events/default/00000000000000000000.events
+2026-01-13 19:29:12.490 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-EVENT: Segments initialized
+2026-01-13 19:29:12.509 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Index on disk is up to date
+2026-01-13 19:29:12.511 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Opening file ./events/default/00000000000000000000.snapshots
+2026-01-13 19:29:12.515 |  INFO |           task-scheduler4 | i.a.a.l.file.WritableFileStorageTier     | default-SNAPSHOT: Segments initialized
+2026-01-13 19:29:12.521 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Starting the node...
+2026-01-13 19:29:12.522 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from IdleState to FollowerState (Role PRIMARY)
+2026-01-13 19:29:12.525 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | The replication log compaction for "default" is scheduled each 1 hour(s).
+2026-01-13 19:29:12.528 |  INFO |           task-scheduler4 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Node started.
+2026-01-13 19:29:13.538 |  INFO |        _admin-raftState-1 | i.a.axonserver.cluster.FollowerState     | _admin in term 3: Timeout in follower state: 1500 ms.
+2026-01-13 19:29:13.553 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from FollowerState to PreVoteState (_admin in term 3: Timeout in follower state: 1500 ms.)
+2026-01-13 19:29:13.584 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultPreVote    | _admin: Starting pre-vote from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 3
+2026-01-13 19:29:13.591 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 3: Updating state from PreVoteState to CandidateState (_admin: Election for term 4 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
+2026-01-13 19:29:13.612 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 3: Leader is null
+2026-01-13 19:29:13.620 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 4: Term updated (My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 is starting a new election, so increases its term from 3 to 4).
+2026-01-13 19:29:13.622 |  INFO |        _admin-raftState-1 | i.a.a.cluster.election.DefaultElection   | _admin: Starting election from My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 in term 4
+2026-01-13 19:29:13.636 |  INFO |        _admin-raftState-1 | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 4: Updating state from CandidateState to LeaderState (_admin: Election for term 4 is won by My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744=true}}))
+2026-01-13 19:29:13.706 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 4: (notification) Leader is My Axon Server
+2026-01-13 19:29:13.742 |  INFO |        _admin-raftState-1 | i.a.a.logging.ClusterEventsLogger        | _admin in term 4: Leader
+2026-01-13 19:29:13.748 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 4: Start replication thread for 0 peers.
+2026-01-13 19:29:13.749 |  INFO |        _admin-raftState-1 | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 4: Appending info that leader has been elected.
+2026-01-13 19:29:14.729 |  INFO |       default-raftState-0 | i.a.axonserver.cluster.FollowerState     | default in term 3: Timeout in follower state: 2206 ms.
+2026-01-13 19:29:14.731 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from FollowerState to PreVoteState (default in term 3: Timeout in follower state: 2206 ms.)
+2026-01-13 19:29:14.739 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultPreVote    | default: Starting pre-vote from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 3
+2026-01-13 19:29:14.741 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 3: Updating state from PreVoteState to CandidateState (default: Election for term 4 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
+2026-01-13 19:29:14.762 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 3: Leader is null
+2026-01-13 19:29:14.764 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 4: Term updated (My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 is starting a new election, so increases its term from 3 to 4).
+2026-01-13 19:29:14.766 |  INFO |       default-raftState-0 | i.a.a.cluster.election.DefaultElection   | default: Starting election from My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 in term 4
+2026-01-13 19:29:14.767 |  INFO |       default-raftState-0 | io.axoniq.axonserver.cluster.RaftNode    | default in term 4: Updating state from CandidateState to LeaderState (default: Election for term 4 is won by My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 (PrimaryAndVotingMajorityStrategy {votes={My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96=true}}))
+2026-01-13 19:29:14.828 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 4: (notification) Leader is My Axon Server
+2026-01-13 19:29:14.845 |  INFO |       default-raftState-0 | i.a.a.logging.ClusterEventsLogger        | default in term 4: Leader
+2026-01-13 19:29:14.848 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 4: Start replication thread for 0 peers.
+2026-01-13 19:29:14.849 |  INFO |       default-raftState-0 | i.axoniq.axonserver.cluster.LeaderState  | default in term 4: Appending info that leader has been elected.
+2026-01-13 19:29:22.486 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 8152@UExcel, clientStreamId = 8152@UExcel.41215143-fdb8-4163-a095-669e53784802, context = default
+2026-01-13 19:31:24.894 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 8152@UExcel.41215143-fdb8-4163-a095-669e53784802, context = default: Platform connection completed by client
+2026-01-13 19:31:31.160 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 8152@UExcel, clientStreamId = 8152@UExcel.72472d91-0e26-4253-a837-581a00645517, context = default
+2026-01-13 19:34:19.670 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 8152@UExcel.72472d91-0e26-4253-a837-581a00645517, context = default: Platform connection completed by client
+2026-01-13 19:34:25.978 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 8152@UExcel, clientStreamId = 8152@UExcel.dd0a42fd-435c-4714-b6be-b2001d123352, context = default
+2026-01-13 19:35:04.154 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 8152@UExcel.dd0a42fd-435c-4714-b6be-b2001d123352, context = default: Platform connection completed by client
+2026-01-13 19:36:16.020 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 25928@UExcel, clientStreamId = 25928@UExcel.d9415b13-124d-4b4b-84f9-7a14a5db1322, context = default
+2026-01-13 19:37:44.766 |  INFO |      http-nio-8024-exec-5 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
+2026-01-13 19:39:04.240 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 25928@UExcel.d9415b13-124d-4b4b-84f9-7a14a5db1322, context = default: Platform connection completed by client
+2026-01-13 20:06:13.944 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4580@UExcel, clientStreamId = 4580@UExcel.b584a339-63f5-488b-a7dc-4f70bcfd52c3, context = default
+2026-01-13 20:06:33.517 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4580@UExcel.b584a339-63f5-488b-a7dc-4f70bcfd52c3, context = default: Platform connection completed by client
+2026-01-13 20:07:15.513 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14856@UExcel, clientStreamId = 14856@UExcel.bc59f47b-94c7-4e56-b22f-616841ef9445, context = default
+2026-01-13 20:08:32.073 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14856@UExcel.bc59f47b-94c7-4e56-b22f-616841ef9445, context = default: Platform connection completed by client
+2026-01-13 20:08:57.188 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 3144@UExcel, clientStreamId = 3144@UExcel.65f553fe-b365-4b23-a842-bb9c61d65902, context = default
+2026-01-13 20:11:39.183 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 3144@UExcel.65f553fe-b365-4b23-a842-bb9c61d65902, context = default: Platform connection completed by client
+2026-01-13 20:13:49.815 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 21052@UExcel, clientStreamId = 21052@UExcel.82b164df-b6e8-4c5a-b7f6-16dabccaa51d, context = default
+2026-01-13 20:32:17.089 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 21052@UExcel.82b164df-b6e8-4c5a-b7f6-16dabccaa51d, context = default: Platform connection completed by client
+2026-01-13 20:33:47.118 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 23024@UExcel, clientStreamId = 23024@UExcel.317ea691-3f94-4dbe-b243-a41b7493e6e9, context = default
+2026-01-13 20:37:08.458 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 23024@UExcel.317ea691-3f94-4dbe-b243-a41b7493e6e9, context = default: Platform connection completed by client
+2026-01-13 21:31:20.156 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 10804@UExcel, clientStreamId = 10804@UExcel.ee0648af-7c14-49cd-9229-3f91393538c0, context = default
+2026-01-13 21:43:49.751 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 2860@UExcel, clientStreamId = 2860@UExcel.1d4df9fc-0ce2-4780-bd1d-2f6c9e1cb1db, context = default
+2026-01-13 21:52:06.162 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 2860@UExcel.1d4df9fc-0ce2-4780-bd1d-2f6c9e1cb1db, context = default: Platform connection completed by client
+2026-01-13 21:52:11.116 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 10804@UExcel.ee0648af-7c14-49cd-9229-3f91393538c0, context = default: Platform connection completed by client
+2026-01-13 21:52:34.219 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 8104@UExcel, clientStreamId = 8104@UExcel.bf434098-e39e-4795-a119-c9930b380f56, context = default
+2026-01-13 21:52:40.743 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 8104@UExcel.bf434098-e39e-4795-a119-c9930b380f56, context = default: Platform connection completed by client
+2026-01-13 21:54:23.470 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 20932@UExcel, clientStreamId = 20932@UExcel.f2a424aa-9441-452c-895d-a837d3f06abc, context = default
+2026-01-13 21:58:13.454 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 20932@UExcel.f2a424aa-9441-452c-895d-a837d3f06abc, context = default: Platform connection completed by client
+2026-01-13 22:14:53.430 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 3444@UExcel, clientStreamId = 3444@UExcel.6137c586-2614-4278-8b2a-ce6468a5ee54, context = default
+2026-01-13 22:14:54.622 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 3444@UExcel.6137c586-2614-4278-8b2a-ce6468a5ee54, context = default: Platform connection completed by client
+2026-01-13 22:21:38.649 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 30012@UExcel, clientStreamId = 30012@UExcel.dac0cac1-93f0-4035-a993-d8cf072f2e70, context = default
+2026-01-13 22:23:42.027 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 30012@UExcel.dac0cac1-93f0-4035-a993-d8cf072f2e70, context = default: Platform connection completed by client
+2026-01-13 22:24:01.353 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 13260@UExcel, clientStreamId = 13260@UExcel.25cc98ba-38d6-4db3-949b-b12561c9bc9d, context = default
+2026-01-13 22:26:43.234 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 13260@UExcel.25cc98ba-38d6-4db3-949b-b12561c9bc9d, context = default: Platform connection completed by client
