@@ -15,3 +15,422 @@ io.grpc.StatusRuntimeException: CANCELLED: client cancelled
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:04:16.254 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.d4997771-a3bc-4ea9-841e-cdc279d5707d, context = default: Platform connection completed by client
+2026-01-17 00:04:20.955 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.50a78b4f-6ef4-49b3-809b-af17ec950fab, context = default
+2026-01-17 00:04:22.276 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.50a78b4f-6ef4-49b3-809b-af17ec950fab, context = default: Platform connection completed by client
+2026-01-17 00:04:26.977 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.6ebf6efa-c7a0-4e4f-81a6-95a317bbfd85, context = default
+2026-01-17 00:06:38.286 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.6ebf6efa-c7a0-4e4f-81a6-95a317bbfd85, context = default: Platform connection completed by client
+2026-01-17 00:06:43.094 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.2ce87801-1d79-4998-9f6c-a30aa697aa20, context = default
+2026-01-17 00:06:44.434 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.2ce87801-1d79-4998-9f6c-a30aa697aa20, context = default: Platform connection completed by client
+2026-01-17 00:06:49.053 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.e8969e8b-8342-43af-8d40-5e55a783ac49, context = default
+2026-01-17 00:10:22.341 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.e8969e8b-8342-43af-8d40-5e55a783ac49, context = default: Platform connection completed by client
+2026-01-17 00:10:27.247 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.c0f50b21-c2d8-4f06-822d-7769cdbf78cb, context = default
+2026-01-17 00:11:26.461 |  WARN |           grpc-executor-1 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:26.462 | ERROR |             data-writer-6 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:51.998 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:51.999 | ERROR |             data-writer-1 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:53.175 |  WARN |           grpc-executor-1 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:53.176 | ERROR |             data-writer-4 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:53.394 |  WARN |           grpc-executor-1 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:53.394 | ERROR |             data-writer-7 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:54.002 |  WARN |           grpc-executor-4 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:54.003 | ERROR |             data-writer-2 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:54.214 |  WARN |           grpc-executor-4 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:54.214 | ERROR |             data-writer-5 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:54.416 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:54.417 | ERROR |             data-writer-8 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:54.634 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:54.635 | ERROR |             data-writer-3 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:54.860 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:54.861 | ERROR |             data-writer-6 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:55.051 |  WARN |           grpc-executor-3 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:55.051 | ERROR |             data-writer-1 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:11:55.256 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:11:55.257 | ERROR |             data-writer-4 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:29:44.522 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:29:44.524 | ERROR |             data-writer-7 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:29:46.596 |  WARN |           grpc-executor-4 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:29:46.598 | ERROR |             data-writer-2 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:30:31.104 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.c0f50b21-c2d8-4f06-822d-7769cdbf78cb, context = default: Platform connection completed by client
+2026-01-17 00:30:37.262 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.e9a3c180-52fe-4f81-aaf7-57285daac10d, context = default
+2026-01-17 00:30:38.468 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.e9a3c180-52fe-4f81-aaf7-57285daac10d, context = default: Platform connection completed by client
+2026-01-17 00:30:44.773 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.420b41ee-d9dd-495b-8670-415f6b600a22, context = default
+2026-01-17 00:32:30.789 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.420b41ee-d9dd-495b-8670-415f6b600a22, context = default: Platform connection completed by client
+2026-01-17 00:32:36.879 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.02bbfa41-7ffb-4008-a098-d152f53e51e5, context = default
+2026-01-17 00:32:38.086 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.02bbfa41-7ffb-4008-a098-d152f53e51e5, context = default: Platform connection completed by client
+2026-01-17 00:32:44.139 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.776ab30c-84d2-4b09-b2f0-47a34dea525c, context = default
+2026-01-17 00:35:12.244 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.776ab30c-84d2-4b09-b2f0-47a34dea525c, context = default: Platform connection completed by client
+2026-01-17 00:35:18.123 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.ec0e9161-13ac-4be1-9c00-d6bd46513afd, context = default
+2026-01-17 00:35:19.255 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.ec0e9161-13ac-4be1-9c00-d6bd46513afd, context = default: Platform connection completed by client
+2026-01-17 00:35:25.933 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.670f1260-3fc7-4c26-beb5-409bd112a36f, context = default
+2026-01-17 00:41:07.831 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.670f1260-3fc7-4c26-beb5-409bd112a36f, context = default: Platform connection completed by client
+2026-01-17 00:41:14.328 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.bce3e58b-ede8-45e0-aa88-d77770529d8d, context = default
+2026-01-17 00:41:15.537 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.bce3e58b-ede8-45e0-aa88-d77770529d8d, context = default: Platform connection completed by client
+2026-01-17 00:41:21.488 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.6b17c35d-b156-4cf9-ae05-a25150e2ac0d, context = default
+2026-01-17 00:45:56.491 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.6b17c35d-b156-4cf9-ae05-a25150e2ac0d, context = default: Platform connection completed by client
+2026-01-17 00:46:02.712 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.c401d05c-3664-41d0-bd84-b4ef6828eb35, context = default
+2026-01-17 00:46:03.880 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.c401d05c-3664-41d0-bd84-b4ef6828eb35, context = default: Platform connection completed by client
+2026-01-17 00:46:10.296 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.cd02361d-92ad-436e-98f7-cf1a5699bfcb, context = default
+2026-01-17 00:47:15.159 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.cd02361d-92ad-436e-98f7-cf1a5699bfcb, context = default: Platform connection completed by client
+2026-01-17 00:47:21.254 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 4904@UExcel, clientStreamId = 4904@UExcel.5d79f00c-f2d3-4fe3-a810-2c5ac6f8ca8b, context = default
+2026-01-17 00:47:21.338 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 4904@UExcel.5d79f00c-f2d3-4fe3-a810-2c5ac6f8ca8b, context = default: Platform connection completed by client
+2026-01-17 00:47:44.224 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 3660@UExcel, clientStreamId = 3660@UExcel.47cbcb54-4e82-481c-9cd2-9ff38834a3b3, context = default
+2026-01-17 00:51:52.304 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 3660@UExcel.47cbcb54-4e82-481c-9cd2-9ff38834a3b3, context = default: Platform connection completed by client
+2026-01-17 00:53:35.349 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14948@UExcel, clientStreamId = 14948@UExcel.88599882-5cec-4c67-b39d-f98b7e01db04, context = default
+2026-01-17 00:53:36.620 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14948@UExcel.88599882-5cec-4c67-b39d-f98b7e01db04, context = default: Platform connection completed by client
+2026-01-17 00:54:03.069 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14568@UExcel, clientStreamId = 14568@UExcel.1d9b429b-8eaf-4e48-a2d2-d55415a0cc9e, context = default
+2026-01-17 00:56:43.499 |  INFO |           MessageBroker-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14568@UExcel.1d9b429b-8eaf-4e48-a2d2-d55415a0cc9e, context = default: Platform stream inactivity for 14568@UExcel.1d9b429b-8eaf-4e48-a2d2-d55415a0cc9e
+2026-01-17 00:56:43.504 |  INFO |           MessageBroker-4 | i.a.a.logging.TopologyEventsLogger       | Application inactivity timeout for product-service clientId = 14568@UExcel, context = default
+2026-01-17 00:56:53.362 |  WARN |           grpc-executor-3 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:56:53.364 | ERROR |             data-writer-6 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 00:56:55.479 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14568@UExcel, clientStreamId = 14568@UExcel.6143407c-7733-4161-96fc-61b3ba1ae7ca, context = default
+2026-01-17 01:03:42.156 |  INFO |      http-nio-8024-exec-1 | A.i.a.a.rest.PluginsRestController       | [<anonymous>] Request to list current plugins. 
+2026-01-17 01:10:48.206 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14568@UExcel.6143407c-7733-4161-96fc-61b3ba1ae7ca, context = default: Platform connection completed by client
+2026-01-17 01:11:36.312 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 15492@UExcel, clientStreamId = 15492@UExcel.085c68aa-f040-4d61-9e85-b9a0d2ebbbf2, context = default
+2026-01-17 01:17:31.367 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 15492@UExcel.085c68aa-f040-4d61-9e85-b9a0d2ebbbf2, context = default: Platform connection completed by client
+2026-01-17 01:17:38.417 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 15492@UExcel, clientStreamId = 15492@UExcel.9b73f78b-c0a6-4678-856d-e14576b846e4, context = default
+2026-01-17 01:17:39.538 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 15492@UExcel.9b73f78b-c0a6-4678-856d-e14576b846e4, context = default: Platform connection completed by client
+2026-01-17 01:17:46.060 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 15492@UExcel, clientStreamId = 15492@UExcel.4dcd40b5-50a7-46a5-b03d-fb822a1f96b6, context = default
+2026-01-17 01:20:45.595 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 15492@UExcel.4dcd40b5-50a7-46a5-b03d-fb822a1f96b6, context = default: Platform connection completed by client
+2026-01-17 01:21:14.258 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.441f40af-ecc9-4d6a-b202-819d06cacb66, context = default
+2026-01-17 01:25:25.938 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.441f40af-ecc9-4d6a-b202-819d06cacb66, context = default: Platform connection completed by client
+2026-01-17 01:25:32.822 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.2178bfd2-156f-41ca-a444-dad8f7f6aba0, context = default
+2026-01-17 01:25:34.033 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.2178bfd2-156f-41ca-a444-dad8f7f6aba0, context = default: Platform connection completed by client
+2026-01-17 01:25:40.231 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.d6751a95-02f6-452d-b35e-705f71f6d88b, context = default
+2026-01-17 01:33:03.079 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.d6751a95-02f6-452d-b35e-705f71f6d88b, context = default: Platform connection completed by client
+2026-01-17 01:33:09.062 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.7d8d7f04-c18c-430f-a287-7f7fbaffa2ed, context = default
+2026-01-17 01:33:10.249 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.7d8d7f04-c18c-430f-a287-7f7fbaffa2ed, context = default: Platform connection completed by client
+2026-01-17 01:33:16.474 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.4f416962-f0b7-48b4-892f-c29db0fff1d0, context = default
+2026-01-17 01:33:39.889 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.4f416962-f0b7-48b4-892f-c29db0fff1d0, context = default: Platform connection completed by client
+2026-01-17 01:33:46.464 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.67814d45-8738-4181-8e5a-ebc2f55fc0f4, context = default
+2026-01-17 01:33:47.569 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.67814d45-8738-4181-8e5a-ebc2f55fc0f4, context = default: Platform connection completed by client
+2026-01-17 01:33:54.053 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.e65657dc-b896-47c6-80eb-f00f0218526c, context = default
+2026-01-17 01:37:07.555 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.e65657dc-b896-47c6-80eb-f00f0218526c, context = default: Platform connection completed by client
+2026-01-17 01:37:14.226 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.91a4aa0f-a3fd-4248-b54a-37924bf9641e, context = default
+2026-01-17 01:37:15.390 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.91a4aa0f-a3fd-4248-b54a-37924bf9641e, context = default: Platform connection completed by client
+2026-01-17 01:37:21.946 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.95d1a16d-4e0d-4a91-b542-216954190c7e, context = default
+2026-01-17 01:38:17.504 |  WARN |           grpc-executor-1 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 01:38:17.508 | ERROR |             data-writer-3 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 01:38:53.495 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.95d1a16d-4e0d-4a91-b542-216954190c7e, context = default: Platform connection completed by client
+2026-01-17 01:38:59.410 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.10b687aa-9960-4330-b2d1-3a981124c673, context = default
+2026-01-17 01:39:00.666 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.10b687aa-9960-4330-b2d1-3a981124c673, context = default: Platform connection completed by client
+2026-01-17 01:39:06.810 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.4dc19e6c-7bec-45c1-83e0-c535efb35c67, context = default
+2026-01-17 01:40:43.094 |  WARN |           grpc-executor-4 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 01:40:43.095 | ERROR |             data-writer-6 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 01:42:18.372 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.4dc19e6c-7bec-45c1-83e0-c535efb35c67, context = default: Platform connection completed by client
+2026-01-17 01:42:23.978 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 11292@UExcel, clientStreamId = 11292@UExcel.274521f5-22e8-4b32-a33d-5f844aa28136, context = default
+2026-01-17 01:42:43.439 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 11292@UExcel.274521f5-22e8-4b32-a33d-5f844aa28136, context = default: Platform connection completed by client
+2026-01-17 01:44:52.898 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.f8c7b740-d6a4-49a4-8be2-1cdec9cd2f4c, context = default
+2026-01-17 01:46:32.622 |  WARN |           grpc-executor-1 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 01:46:32.624 | ERROR |             data-writer-1 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 01:48:16.358 |  INFO |           grpc-executor-2 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.f8c7b740-d6a4-49a4-8be2-1cdec9cd2f4c, context = default: Platform connection completed by client
+2026-01-17 01:48:22.916 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.60b7d9db-f342-4466-ae06-c38f50502e32, context = default
+2026-01-17 01:48:24.095 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.60b7d9db-f342-4466-ae06-c38f50502e32, context = default: Platform connection completed by client
+2026-01-17 01:48:30.121 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.e1acd7ac-5313-4584-ae9b-4f847e8bc749, context = default
+2026-01-17 01:53:39.609 |  INFO |      http-nio-8024-exec-2 | A.i.a.a.rest.ClusterRestController       | [<anonymous>] Request cluster template download.
+2026-01-17 01:53:41.692 |  INFO |     http-nio-8024-exec-10 | A.i.a.a.rest.ClusterRestController       | [<anonymous>] Request cluster template download.
+2026-01-17 01:54:09.290 |  INFO |      http-nio-8024-exec-5 | A.i.a.a.a.u.r.RaftUserAdminService       | [<anonymous>] Request to list users and their roles.
+2026-01-17 01:57:20.708 |  INFO |      http-nio-8024-exec-4 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2026-01-17 01:57:20.709 |  INFO |     http-nio-8024-exec-10 | .r.ReplicationGroupAdminRequestProcessor | [<anonymous>] Requested to list all replication groups.
+2026-01-17 01:57:21.196 |  INFO |      http-nio-8024-exec-3 | A.i.a.a.ui.ClusterUpdatesService         | [<anonymous>] Subscribed to context updates.
+2026-01-17 02:00:17.948 |  INFO |      http-nio-8024-exec-1 | i.a.a.a.c.r.ContextAdminRequestProcessor | [<anonymous>] Request to list contexts.
+2026-01-17 02:00:17.948 |  INFO |      http-nio-8024-exec-2 | A.i.a.a.t.r.v2.ContextRestControllerV2   | [<anonymous>] Request to get context properties.
+2026-01-17 02:00:17.949 |  INFO |     http-nio-8024-exec-10 | A.i.a.a.t.r.v2.ContextRestControllerV2   | [<anonymous>] Request to get storages for context default.
+2026-01-17 02:01:03.599 |  INFO |      http-nio-8024-exec-9 | .r.ReplicationGroupAdminRequestProcessor | [<anonymous>] Requested to list all replication groups.
+2026-01-17 02:14:49.102 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.e1acd7ac-5313-4584-ae9b-4f847e8bc749, context = default: Platform connection completed by client
+2026-01-17 02:14:53.653 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.c83f242d-c9da-40d7-aa47-f7c8bf47702a, context = default
+2026-01-17 02:14:54.977 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.c83f242d-c9da-40d7-aa47-f7c8bf47702a, context = default: Platform connection completed by client
+2026-01-17 02:14:59.580 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.4d61e048-c1d0-4c14-afcf-f887236837f3, context = default
+2026-01-17 02:16:19.243 |  WARN |           grpc-executor-4 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 02:16:19.244 | ERROR |             data-writer-7 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+2026-01-17 02:18:18.181 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.4d61e048-c1d0-4c14-afcf-f887236837f3, context = default: Platform connection completed by client
+2026-01-17 02:18:22.820 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.10d176a5-1fb9-41b6-bad7-4c18ca524ad5, context = default
+2026-01-17 02:18:24.173 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.10d176a5-1fb9-41b6-bad7-4c18ca524ad5, context = default: Platform connection completed by client
+2026-01-17 02:18:28.770 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14056@UExcel, clientStreamId = 14056@UExcel.14df58bf-8849-4e57-94d5-fc21273f5f8c, context = default
+2026-01-17 02:20:37.707 |  INFO |           grpc-executor-4 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14056@UExcel.14df58bf-8849-4e57-94d5-fc21273f5f8c, context = default: Platform connection completed by client
+2026-01-17 02:21:37.127 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.grpc.Gateway        | Axon Server Gateway stopped
+2026-01-17 02:21:37.129 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 8: Stopping the node...
+2026-01-17 02:21:37.132 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 8: Stop replication thread
+2026-01-17 02:21:37.133 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 8: last applied: 33
+2026-01-17 02:21:37.136 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | default in term 8: My Axon Server-b295c771-88d2-4eaf-a74a-0a913c90ba96 steps down from Leader role.
+2026-01-17 02:21:37.136 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 8: Updating state from LeaderState to IdleState (Node stopped)
+2026-01-17 02:21:37.204 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | default: No longer leader
+2026-01-17 02:21:37.215 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | default in term 8: Node stopped.
+2026-01-17 02:21:37.216 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 8: Stopping the node...
+2026-01-17 02:21:37.216 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 8: Stop replication thread
+2026-01-17 02:21:37.217 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 8: last applied: 14
+2026-01-17 02:21:37.217 |  INFO | ngApplicationShutdownHook | i.axoniq.axonserver.cluster.LeaderState  | _admin in term 8: My Axon Server-ffbc393a-8060-4f1a-a755-71778294a744 steps down from Leader role.
+2026-01-17 02:21:37.217 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 8: Updating state from LeaderState to IdleState (Node stopped)
+2026-01-17 02:21:37.219 |  INFO | ngApplicationShutdownHook | i.a.a.logging.ClusterEventsLogger        | _admin: No longer leader
+2026-01-17 02:21:37.221 |  INFO | ngApplicationShutdownHook | io.axoniq.axonserver.cluster.RaftNode    | _admin in term 8: Node stopped.
+2026-01-17 02:21:37.233 |  INFO | ngApplicationShutdownHook | i.a.a.e.c.i.MessagingClusterServer       | Axon Server Cluster Server stopped

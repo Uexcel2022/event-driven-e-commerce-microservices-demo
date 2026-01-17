@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.axonframework</groupId>
             <artifactId>axon-spring-boot-starter</artifactId>
-            <version>4.12.2</version>
+            <version>4.12.3</version>
         </dependency>
 
         <!-- Source: https://mvnrepository.com/artifact/com.google.guava/guava -->

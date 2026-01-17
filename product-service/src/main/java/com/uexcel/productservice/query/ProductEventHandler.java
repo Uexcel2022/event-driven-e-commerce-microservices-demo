@@ -1,7 +1,6 @@
 package com.uexcel.productservice.query;
 
 import com.uexcel.productservice.core.data.ProductEntity;
-import com.uexcel.productservice.core.data.ProductLookupEntity;
 import com.uexcel.productservice.core.data.ProductRepository;
 import com.uexcel.productservice.core.event.ProductCreatedEvent;
 import org.axonframework.config.ProcessingGroup;
