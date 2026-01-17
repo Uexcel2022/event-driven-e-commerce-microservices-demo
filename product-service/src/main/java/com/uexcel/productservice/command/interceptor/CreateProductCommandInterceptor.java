@@ -28,7 +28,7 @@ public class CreateProductCommandInterceptor implements MessageDispatchIntercept
             LOGGER.info("Intercepted Command: {}", command.getPayload());
            if(command.getPayload() instanceof CreateProductCommand cpc){
                if(productLookupRepository.existsByProductIdOrTitle(cpc.getProductId(),cpc.getTitle())){
-                   throw new ProductAlreadyExistException("""
+                   throw new IllegalStateException("""
                            Product with ID: %s or Title: %s already exists."""
                            .formatted(cpc.getProductId(),cpc.getTitle()));
                }

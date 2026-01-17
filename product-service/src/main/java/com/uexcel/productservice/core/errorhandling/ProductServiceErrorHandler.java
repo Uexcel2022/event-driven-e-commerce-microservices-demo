@@ -1,39 +1,48 @@
 package com.uexcel.productservice.core.errorhandling;
 
+import org.axonframework.commandhandling.CommandExecutionException;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.context.request.WebRequest;
-import org.springframework.web.server.ResponseStatusException;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 
-@RestControllerAdvice
+@ControllerAdvice
 public class ProductServiceErrorHandler {
 
-    @ExceptionHandler(ProductAlreadyExistException.class)
-    public ResponseEntity<ErrorResponse> handleIllegalStateException(ProductAlreadyExistException ex, WebRequest request) {
-        return new ResponseEntity<>(new ErrorResponse(timestamp(), 409, ex.getMessage(),
-                request.getDescription(false).split("=")[1]), HttpStatus.CONFLICT);
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<ErrorResponse>
+    handleIllegalStateException(IllegalStateException ex, WebRequest request) {
+        return new ResponseEntity<>(new ErrorResponse(timestamp(), HttpStatus.CONFLICT.value(), ex.getMessage(),
+                HttpStatus.CONFLICT.getReasonPhrase(),
+                request.getDescription(false).split("=")[1]),
+                new HttpHeaders(), HttpStatus.CONFLICT);
     }
 
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<Object> handleIllegalArgumentException(IllegalArgumentException ex, WebRequest request) {
-        return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(CommandExecutionException.class)
+    public ResponseEntity<ErrorResponse>
+    handleCommandExecutionException(CommandExecutionException ex, WebRequest request) {
+        return new ResponseEntity<>(new ErrorResponse(timestamp(), HttpStatus.EXPECTATION_FAILED.value(), ex.getMessage(),
+                HttpStatus.EXPECTATION_FAILED.getReasonPhrase(),
+                request.getDescription(false).split("=")[1]),
+                new HttpHeaders(), HttpStatus.EXPECTATION_FAILED);
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<Object> handleOtherExceptions( Exception ex, WebRequest request) {
-        return new ResponseEntity<>(new ErrorResponse(timestamp(), 500, ex.getMessage(),
-                request.getDescription(false)), HttpStatus.INTERNAL_SERVER_ERROR);
+    public ResponseEntity<ErrorResponse> handleOtherExceptions( Exception ex, WebRequest request) {
+        return new ResponseEntity<>(new ErrorResponse(timestamp(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage(),
+                HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),
+                request.getDescription(false).split("=")[1]),
+                new HttpHeaders(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    private String timestamp() {
+    public String timestamp() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
         return sdf.format(new Date());
     }

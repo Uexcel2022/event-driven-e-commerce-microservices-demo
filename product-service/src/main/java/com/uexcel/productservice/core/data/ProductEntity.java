@@ -15,7 +15,6 @@ import java.math.BigDecimal;
 public class ProductEntity implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
-
     @Id
     @Column(nullable = false, updatable = false, unique = true)
     private String productId;

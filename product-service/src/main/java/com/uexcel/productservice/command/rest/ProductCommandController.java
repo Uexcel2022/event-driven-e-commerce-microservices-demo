@@ -1,5 +1,6 @@
 package com.uexcel.productservice.command.rest;
 import com.uexcel.productservice.command.CreateProductCommand;
+import com.uexcel.productservice.core.errorhandling.ProductAlreadyExistException;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.axonframework.commandhandling.CommandExecutionException;
@@ -20,20 +21,14 @@ public class ProductCommandController {
     private final CommandGateway commandGateway;
 
     @PostMapping
-    public ResponseStatusException createProduct(@Valid @RequestBody CreateProductModel model) {
+    public String createProduct(@Valid @RequestBody CreateProductModel model) {
         CreateProductCommand createProductCommand = CreateProductCommand.builder()
                 .productId(UUID.randomUUID().toString())
                 .price(model.getPrice())
                 .quantity(model.getQuantity())
                 .title(model.getTitle())
                 .build();
-        try {
             return commandGateway.sendAndWait(createProductCommand);
-        } catch (Exception ex) {
-            return new ResponseStatusException(
-                    HttpStatus.INTERNAL_SERVER_ERROR, ex.getMessage()
-                    );
-        }
     }
 }
 

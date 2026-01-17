@@ -1,4 +1,17 @@
-2026-01-16 00:00:34.136 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14580@UExcel.1eb0bfd4-9e9e-4b61-9608-16fe29dd10c1, context = default: Platform connection completed by client
-2026-01-16 00:00:40.080 |  INFO |           grpc-executor-1 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14580@UExcel, clientStreamId = 14580@UExcel.475216d7-1155-4379-b229-6dfbafed7113, context = default
-2026-01-16 00:00:41.338 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application disconnected: product-service, clientId = 14580@UExcel.475216d7-1155-4379-b229-6dfbafed7113, context = default: Platform connection completed by client
-2026-01-16 00:00:47.101 |  INFO |           grpc-executor-3 | i.a.a.logging.TopologyEventsLogger       | Application connected: product-service, clientId = 14580@UExcel, clientStreamId = 14580@UExcel.07287ac3-b8df-46e6-a800-15e3db7440b0, context = default
+2026-01-17 00:00:12.380 |  WARN |           grpc-executor-2 | i.a.axonserver.grpc.EventStoreService    | Error on connection from client: CANCELLED: client cancelled
+2026-01-17 00:00:12.457 | ERROR |             data-writer-3 | i.a.a.localstorage.LocalEventStore       | default: Error occurred during store batch operation: 
+io.grpc.StatusRuntimeException: CANCELLED: client cancelled
+	at io.grpc.Status.asRuntimeException(Status.java:524) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.stub.ServerCalls$StreamingServerCallHandler$StreamingServerCallListener.onCancel(ServerCalls.java:291) ~[grpc-stub-1.75.0.jar!/:1.75.0]
+	at io.grpc.PartialForwardingServerCallListener.onCancel(PartialForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:23) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.ForwardingServerCallListener$SimpleForwardingServerCallListener.onCancel(ForwardingServerCallListener.java:40) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.Contexts$ContextualizedServerCallListener.onCancel(Contexts.java:96) ~[grpc-api-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closedInternal(ServerCallImpl.java:375) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerCallImpl$ServerStreamListenerImpl.closed(ServerCallImpl.java:364) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ServerImpl$JumpToApplicationThreadServerStreamListener$1Closed.runInContext(ServerImpl.java:910) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133) ~[grpc-core-1.75.0.jar!/:1.75.0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]

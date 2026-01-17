@@ -22,7 +22,7 @@ public class ProductAggregate {
     public ProductAggregate() {}
 
     @CommandHandler
-    public ProductAggregate(CreateProductCommand cmd) {
+    public ProductAggregate(CreateProductCommand cmd){
 //         you can perform validation
         if (cmd.getProductId() == null || cmd.getTitle() == null || cmd.getPrice() == null) {
             throw new InvalidParameterException("Product Id and Title are mandatory");
