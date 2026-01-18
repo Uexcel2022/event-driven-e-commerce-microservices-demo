@@ -1,4 +1,4 @@
-package com.uexcel.orderservice.core;
+package com.uexcel.orderservice.core.event;
 
 import com.uexcel.orderservice.command.OrderStatus;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.uexcel.orderservice.core;
+package com.uexcel.orderservice.core.data;
 
 import com.uexcel.orderservice.command.OrderStatus;
 import jakarta.persistence.*;

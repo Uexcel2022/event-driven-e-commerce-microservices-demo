@@ -1,8 +1,8 @@
 package com.uexcel.orderservice;
 
-import com.uexcel.orderservice.core.OrderCreatedEvent;
-import com.uexcel.orderservice.core.OrderEntity;
-import com.uexcel.orderservice.core.OrderRepository;
+import com.uexcel.orderservice.core.event.OrderCreatedEvent;
+import com.uexcel.orderservice.core.data.OrderEntity;
+import com.uexcel.orderservice.core.data.OrderRepository;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;

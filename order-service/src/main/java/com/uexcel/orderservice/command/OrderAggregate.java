@@ -1,5 +1,5 @@
 package com.uexcel.orderservice.command;
-import com.uexcel.orderservice.core.OrderCreatedEvent;
+import com.uexcel.orderservice.core.event.OrderCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
