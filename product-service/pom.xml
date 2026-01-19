@@ -42,6 +42,12 @@
             <version>4.12.3</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.uexcel</groupId>
+            <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!-- Source: https://mvnrepository.com/artifact/com.google.guava/guava -->
         <dependency>
             <groupId>com.google.guava</groupId>

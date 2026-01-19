@@ -1,3 +1,6 @@
+server:
+  port: 0
+
 spring:
   application:
     name: order-service
@@ -29,5 +32,4 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
 
 
-server:
-  port: 0
+

@@ -10,6 +10,6 @@ public class OrderCreatedEvent {
     private String userId;
     private Integer quantity;
     private String addressId;
-    private OrderStatus status;
+    private OrderStatus orderStatus;
 
 }

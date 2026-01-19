@@ -20,5 +20,5 @@ public class OrderEntity {
     @Column(nullable = false)
     private String addressId;
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private OrderStatus orderStatus;
 }

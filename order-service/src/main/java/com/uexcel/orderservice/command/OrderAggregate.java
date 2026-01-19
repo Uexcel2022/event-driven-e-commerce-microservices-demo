@@ -34,7 +34,7 @@ public class OrderAggregate {
         this.userId = orderCreatedEvent.getUserId();
         this.quantity = orderCreatedEvent.getQuantity();
         this.addressId = orderCreatedEvent.getAddressId();
-        this.status = orderCreatedEvent.getStatus();
+        this.status = orderCreatedEvent.getOrderStatus();
     }
 
 

@@ -15,7 +15,6 @@ import java.util.function.BiFunction;
 @Component
 public class CreateProductCommandInterceptor implements MessageDispatchInterceptor<CommandMessage<?>> {
     private final ProductLookupRepository productLookupRepository;
-    private final Logger LOGGER = LoggerFactory.getLogger(CreateProductCommandInterceptor.class);
 
     public CreateProductCommandInterceptor(ProductLookupRepository productLookupRepository) {
         this.productLookupRepository = productLookupRepository;
@@ -25,7 +24,6 @@ public class CreateProductCommandInterceptor implements MessageDispatchIntercept
     public @NonNull BiFunction<Integer, CommandMessage<?>, CommandMessage<?>>
     handle(@NonNull List<? extends CommandMessage<?>> messages) {
         return (index, command) -> {
-            LOGGER.info("Intercepted Command: {}", command.getPayload());
            if(command.getPayload() instanceof CreateProductCommand cpc){
                if(productLookupRepository.existsByProductIdOrTitle(cpc.getProductId(),cpc.getTitle())){
                    throw new IllegalStateException("""
