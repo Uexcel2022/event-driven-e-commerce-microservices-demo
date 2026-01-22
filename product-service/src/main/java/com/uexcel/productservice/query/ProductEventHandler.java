@@ -1,5 +1,6 @@
 package com.uexcel.productservice.query;
 
+import com.uexcel.core.command.event.ProductReservationCanceledEvent;
 import com.uexcel.core.command.event.ProductReservedEvent;
 import com.uexcel.productservice.core.data.ProductEntity;
 import com.uexcel.productservice.core.data.ProductRepository;
@@ -40,10 +41,24 @@ public class ProductEventHandler {
 
     @EventHandler
     public void handle(ProductReservedEvent event){
-        ProductEntity productEntity = productRepository.findByProductId(event.getProductId());
-        productEntity.setQuantity(productEntity.getQuantity() - event.getQuantity());
-        productRepository.save(productEntity);
-        logger.info("************ProductReservedEventS productId {}", event.getProductId());
+        logger.debug("ProductReservedEvent: product quantity Before: {}",event.getQuantity());
+        ProductEntity toUpdate = productRepository.findByProductId(event.getProductId());
+        toUpdate.setQuantity(toUpdate.getQuantity() - event.getQuantity());
+        productRepository.save(toUpdate);
+        logger.debug("ProductReservedEvent: product quantity After: {}",event.getQuantity());
+    }
+
+    @EventHandler
+    public void handle(ProductReservationCanceledEvent pCRE){
+        logger.debug("ProductReservationCanceledEvent: product quantity Before: {}",pCRE.getQuantity());
+        ProductEntity toUpdate = productRepository.findByProductId(pCRE.getProductId());
+        if(toUpdate==null){
+            throw new IllegalStateException("Could not find product with the ID");
+        }
+        toUpdate.setQuantity(toUpdate.getQuantity() + pCRE.getQuantity());
+        productRepository.save(toUpdate);
+        logger.debug("ProductReservationCanceledEvent: product quantity After: {}",pCRE.getQuantity());
+
     }
 
 

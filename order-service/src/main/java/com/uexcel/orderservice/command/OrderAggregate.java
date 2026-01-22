@@ -1,5 +1,7 @@
 package com.uexcel.orderservice.command;
 import com.uexcel.orderservice.command.commands.ApprovedOrderCommand;
+import com.uexcel.orderservice.command.commands.RejectOrderCommand;
+import com.uexcel.orderservice.core.event.RejectedOrderEvent;
 import com.uexcel.orderservice.core.event.OrderApprovedEvent;
 import com.uexcel.orderservice.core.event.OrderCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
@@ -44,12 +46,25 @@ public class OrderAggregate {
         OrderApprovedEvent orderApprovedEvent =
                 new OrderApprovedEvent(approvedOrderCommand.getOrderId());
         AggregateLifecycle.apply(orderApprovedEvent);
-
+    }
+    @CommandHandler
+    public void handle(RejectOrderCommand cOC){
+        RejectedOrderEvent rOE =
+                new RejectedOrderEvent(
+                        cOC.getOrderId(),cOC.getOrderId(),OrderStatus.REJECTED
+                );
+        AggregateLifecycle.apply(rOE);
     }
 
     @EventSourcingHandler
     public void handle(OrderApprovedEvent orderApprovedEvent){
         this.orderStatus = orderApprovedEvent.getOrderStatus();
+    }
+
+    @EventSourcingHandler
+    public void handle(RejectedOrderEvent cOC){
+        this.orderStatus = cOC.getOrderStatus();
+
     }
 
 

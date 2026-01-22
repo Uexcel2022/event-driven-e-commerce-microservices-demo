@@ -4,6 +4,7 @@ import com.uexcel.orderservice.core.event.OrderApprovedEvent;
 import com.uexcel.orderservice.core.event.OrderCreatedEvent;
 import com.uexcel.orderservice.core.data.OrderEntity;
 import com.uexcel.orderservice.core.data.OrderRepository;
+import com.uexcel.orderservice.core.event.RejectedOrderEvent;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.slf4j.Logger;
@@ -32,13 +33,21 @@ public class OrderEventsHandler {
     @EventHandler
     public void handle(OrderApprovedEvent orderApprovedEvent)
     {
-        OrderEntity  order =
+        OrderEntity toUpdateOder =
                 orderRepository.findByOrderId(orderApprovedEvent.getOrderId());
-        if(order==null){
+        if(toUpdateOder==null){
             throw new IllegalStateException("Order Not Found!");
         }
-        order.setOrderStatus(orderApprovedEvent.getOrderStatus());
-        orderRepository.save(order);
+        toUpdateOder.setOrderStatus(orderApprovedEvent.getOrderStatus());
+        orderRepository.save(toUpdateOder);
         logger.info("OrderApprovedEvent; order approved {}", orderApprovedEvent);
+    }
+
+    @EventHandler
+    public void handle(RejectedOrderEvent rOE){
+        OrderEntity  toUpdateOder =
+                orderRepository.findByOrderId(rOE.getOrderId());
+        toUpdateOder.setOrderStatus(rOE.getOrderStatus());
+        orderRepository.save(toUpdateOder);
     }
 }

@@ -1,5 +1,7 @@
 package com.uexcel.productservice.command;
+import com.uexcel.core.command.CancelProductReservationCommand;
 import com.uexcel.core.command.ReserveProductCommand;
+import com.uexcel.core.command.event.ProductReservationCanceledEvent;
 import com.uexcel.core.command.event.ProductReservedEvent;
 import com.uexcel.productservice.core.event.ProductCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
@@ -48,6 +50,19 @@ public class ProductAggregate {
         AggregateLifecycle.apply(event);
     }
 
+    @CommandHandler
+    public void handle(CancelProductReservationCommand cRPC){
+        ProductReservationCanceledEvent pRCE = ProductReservationCanceledEvent.builder()
+                .productId(cRPC.getProductId())
+                .orderId(cRPC.getOrderId())
+                .userId(cRPC.getUserId())
+                .reason(cRPC.getReason())
+                .quantity(cRPC.getQuantity())
+                .build();
+        AggregateLifecycle.apply(pRCE);
+
+    }
+
     //Avoid adding business logic
     @EventSourcingHandler
     public void on(ProductCreatedEvent productCreatedEvent) {
@@ -60,5 +75,11 @@ public class ProductAggregate {
     @EventSourcingHandler
     public void on(ProductReservedEvent productReservedEvent) {
         this.quantity -= productReservedEvent.getQuantity();
+    }
+
+    @EventSourcingHandler
+    public void handle(ProductReservationCanceledEvent pRCE){
+       this.quantity += pRCE.getQuantity();
+
     }
 }
