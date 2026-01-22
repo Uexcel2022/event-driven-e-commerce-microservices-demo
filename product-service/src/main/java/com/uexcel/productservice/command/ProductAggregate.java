@@ -21,7 +21,6 @@ public class ProductAggregate {
     private String title;
     private BigDecimal price;
     private Integer quantity;
-    private final Logger logger = LoggerFactory.getLogger(this.getClass());
     public ProductAggregate() {}
 
     @CommandHandler
@@ -46,8 +45,6 @@ public class ProductAggregate {
                 .orderId(reserveProductCommand.getOrderId())
                 .userId(reserveProductCommand.getUserId())
                 .build();
-        logger.info("*********Aggregate applied *********");
-
         AggregateLifecycle.apply(event);
     }
 
@@ -62,7 +59,6 @@ public class ProductAggregate {
 
     @EventSourcingHandler
     public void on(ProductReservedEvent productReservedEvent) {
-        logger.info("************Product Event sourcing executed productId {}", productReservedEvent.getProductId());
         this.quantity -= productReservedEvent.getQuantity();
     }
 }

@@ -8,7 +8,7 @@ import lombok.Data;
 public class PaymentDetails {
     private final String name;
     private final String cardNumber;
-    private final String validUntilMonth;
-    private final String getValidUntilYear;
+    private final int validUntilMonth;
+    private final int getValidUntilYear;
     private final String cvv;
 }

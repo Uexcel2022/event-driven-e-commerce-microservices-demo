@@ -1,4 +1,6 @@
 package com.uexcel.orderservice.command;
+import com.uexcel.orderservice.command.commands.ApprovedOrderCommand;
+import com.uexcel.orderservice.core.event.OrderApprovedEvent;
 import com.uexcel.orderservice.core.event.OrderCreatedEvent;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
@@ -15,7 +17,7 @@ public class OrderAggregate {
     private String userId;
     private Integer quantity;
     private String addressId;
-    private OrderStatus status;
+    private OrderStatus orderStatus;
 
     public OrderAggregate(){}
 
@@ -34,7 +36,20 @@ public class OrderAggregate {
         this.userId = orderCreatedEvent.getUserId();
         this.quantity = orderCreatedEvent.getQuantity();
         this.addressId = orderCreatedEvent.getAddressId();
-        this.status = orderCreatedEvent.getOrderStatus();
+        this.orderStatus = orderCreatedEvent.getOrderStatus();
+    }
+
+    @CommandHandler
+    public void handle(ApprovedOrderCommand approvedOrderCommand){
+        OrderApprovedEvent orderApprovedEvent =
+                new OrderApprovedEvent(approvedOrderCommand.getOrderId());
+        AggregateLifecycle.apply(orderApprovedEvent);
+
+    }
+
+    @EventSourcingHandler
+    public void handle(OrderApprovedEvent orderApprovedEvent){
+        this.orderStatus = orderApprovedEvent.getOrderStatus();
     }
 
 

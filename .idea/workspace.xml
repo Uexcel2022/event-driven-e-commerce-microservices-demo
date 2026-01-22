@@ -4,31 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754cb2e4-91bb-4831-b359-04426851cf6e" name="Changes" comment="added order service improvements and added core class for a dependency">
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/ReserveProductCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/event/ProductReservedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/PaymentDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/query/FetchUserPaymentDetailsQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/config/AxonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/saga/OrderSagaProcessor.java" afterDir="false" />
+    <list default="true" id="754cb2e4-91bb-4831-b359-04426851cf6e" name="Changes" comment="added user service and improvements.">
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/ProcessPaymentCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/event/PaymentProcessedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/command/commands/ApprovedOrderCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/event/OrderApprovedEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/uexcel/paymentservice/command/PaymentAggregate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/uexcel/paymentservice/config/AxonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/uexcel/paymentservice/core/data/PaymentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/uexcel/paymentservice/core/data/PaymentsRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/uexcel/paymentservice/query/PaymentEventsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/uexcel/userservice/config/AxonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-service/src/main/java/com/uexcel/userservice/query/UserEventsHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/CoreApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/test/java/com/uexcel/core/CoreApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/ReserveProductCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/command/ReserveProductCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/PaymentDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/PaymentDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/model/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/query/FetchUserPaymentDetailsQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/uexcel/core/query/FetchUserPaymentDetailsQuery.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-data/data/_diagnostics/logfile.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker-data/data/_diagnostics/logfile.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-data/data/axonserver-configdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/docker-data/data/axonserver-configdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/CreateOrderEventsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/query/CreateOrderEventsHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/command/OrderAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/command/OrderAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/data/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/data/OrderEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/event/OrderCreatedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/event/OrderCreatedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/config/AxonConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/config/AxonConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/data/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/core/data/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/query/CreateOrderEventsHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/query/OrderEventsHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/saga/OrderSagaProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/uexcel/orderservice/saga/OrderSagaProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/command/ProductAggregate.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/command/ProductAggregate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/command/interceptor/CreateProductCommandInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/command/interceptor/CreateProductCommandInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/config/AxonTxConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/config/AxonConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/query/ProductEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/uexcel/productservice/query/ProductEventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,36 +82,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.DiscoveryServiceApplication.executor": "Run",
-    "Spring Boot.GatewayServiceApplication.executor": "Run",
-    "Spring Boot.OrderServiceApplication.executor": "Run",
-    "Spring Boot.ProductServiceApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Even_Driven_Ms",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reactor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.DiscoveryServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.PaymentServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Even_Driven_Ms&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reactor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -114,7 +122,7 @@
       <recent name="com.uexcel.core" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.OrderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.UserServiceApplication">
     <configuration name="DiscoveryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="discovery-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.uexcel.discoveryservice.DiscoveryServiceApplication" />
@@ -133,6 +141,13 @@
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="order-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.uexcel.orderservice.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.uexcel.paymentservice.PaymentServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,7 +186,12 @@
       <updated>1768770966413</updated>
       <workItem from="1768770967558" duration="16121000" />
       <workItem from="1768830315777" duration="10260000" />
-      <workItem from="1768849295464" duration="13084000" />
+      <workItem from="1768849295464" duration="18709000" />
+      <workItem from="1768871852069" duration="1157000" />
+      <workItem from="1768935675748" duration="7538000" />
+      <workItem from="1768982635709" duration="5295000" />
+      <workItem from="1769026503191" duration="2777000" />
+      <workItem from="1769065708764" duration="8084000" />
     </task>
     <task id="LOCAL-00001" summary="added order service improvements and added core class for a dependency">
       <option name="closed" value="true" />
@@ -189,7 +209,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768771286058</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added user service and improvements.">
+      <option name="closed" value="true" />
+      <created>1768866487047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1768866487047</updated>
+    </task>
+    <task id="LOCAL-00004" summary="added user service and improvements.">
+      <option name="closed" value="true" />
+      <created>1768866497897</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1768866497897</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +244,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added order service improvements and added core class for a dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="added order service improvements and added core class for a dependency" />
+    <MESSAGE value="added user service and improvements." />
+    <option name="LAST_COMMIT_MESSAGE" value="added user service and improvements." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

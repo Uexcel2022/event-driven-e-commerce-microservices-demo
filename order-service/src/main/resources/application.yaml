@@ -31,5 +31,11 @@ eureka:
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${instanceId:${random.value}}
 
+axon:
+  eventhandling:
+    processors:
+      product-group:
+        mode: subscribing
+
 
 

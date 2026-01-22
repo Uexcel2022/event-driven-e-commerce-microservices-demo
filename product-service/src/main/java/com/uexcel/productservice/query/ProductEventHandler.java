@@ -43,7 +43,7 @@ public class ProductEventHandler {
         ProductEntity productEntity = productRepository.findByProductId(event.getProductId());
         productEntity.setQuantity(productEntity.getQuantity() - event.getQuantity());
         productRepository.save(productEntity);
-        logger.info("************Product reserved productId {}", event.getProductId());
+        logger.info("************ProductReservedEventS productId {}", event.getProductId());
     }
 
 

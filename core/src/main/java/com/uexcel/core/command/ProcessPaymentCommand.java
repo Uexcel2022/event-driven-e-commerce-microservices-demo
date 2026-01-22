@@ -1,17 +1,15 @@
 package com.uexcel.core.command;
 
+import com.uexcel.core.model.PaymentDetails;
 import lombok.Builder;
 import lombok.Data;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
 
-import java.io.Serializable;
-
 @Data
 @Builder
-public class ReserveProductCommand{
+public class ProcessPaymentCommand {
     @TargetAggregateIdentifier
-    private final String productId;
-    private final int quantity;
+    private final String paymentId;
     private final String orderId;
-    private final String userId;
+    private final PaymentDetails paymentDetails;
 }
